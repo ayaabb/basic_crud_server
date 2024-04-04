@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Request, HTTPException
 from file_handler.read_from_file import get_data
 from file_handler.write_to_file import write_data
-from models.student_model import student_model
-from utils.auth_fns import check_Authorization, check_if_user_admin
-from utils.students_fns import generate_new_student_data, class_students, get_student_by_id
+from students_models.student_model import student_model
+from auth_utils.jwt_handler import check_Authorization, check_if_user_admin
+from students_utils.students_fns import generate_new_student_data, class_students, get_student_by_id
 
 router = APIRouter()
 
