@@ -2,14 +2,13 @@ import time
 
 import bcrypt
 import jwt
-from decouple import config
 
 from file_handler.read_from_file import get_data
 
 auth_users_path = "database/auth_users.json"
 users_tokens_path = "database/users_tokens.json"
-JWT_SECRET = config("secret")
-JWT_ALGORITHM = config("algorithm")
+JWT_SECRET = "831809585cd154b09a6b1648c1bb7eee"
+JWT_ALGORITHM = "HS256"
 
 
 def prepare_new_tokens_data(username, token):
