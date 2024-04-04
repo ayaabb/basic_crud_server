@@ -12,7 +12,9 @@ router = APIRouter()
 async def get_all_students(request: Request):
     """
     Retrieve all students.
-    Returns: List: A list of all students.
+    param: request (Request): The incoming HTTP request object.
+    Returns: List[student_model]: A list of all students.
+    Raises: HTTPException: If no validated token for the username is provided in the request.
     """
     request_auth = check_Authorization(request)
     if request_auth:
@@ -24,10 +26,14 @@ async def get_all_students(request: Request):
 
 @router.get('/students/{student_id}')
 async def get_student(request: Request, student_id: int):
-    """ Retrieve a specific student by his id
-        param: student_id (int): The id of the student to retrieve.
-        Returns: str: The name of the student if found, otherwise "student not found".
     """
+      Retrieve a specific student by their ID.
+      param: request (Request): The incoming HTTP request object.
+          student_id (int): The ID of the student to retrieve.
+      Returns: The student name if student_id found,
+            otherwise {"error msg": "student not found"}.
+      Raises: HTTPException: If no validated token for the username is provided in the request.
+      """
     request_auth = check_Authorization(request)
     if request_auth:
         students = get_data("database/students.json")
@@ -40,10 +46,12 @@ async def get_student(request: Request, student_id: int):
 
 @router.get('/students/classes/{class_name}')
 async def get_class_students(request: Request, class_name: str):
-    """Retrieve students belonging to a specific class.
-    param: class_name (str): The name of the class to filter students by.
-    Returns: List: A list of names of students belonging to the specified class.
-              If class not found, returns "class not found".
+    """
+    Retrieve students belonging to a specific class.
+    parma: class_name (str): The name of the class to filter students by.
+    Returns: A list of names of students belonging to the specified class.
+            If class not found, returns {"error msg": "class not found"}.
+    Raises: HTTPException: If no validated token for the username is provided in the request or the user is not authorized as an admin.
     """
     request_auth = check_Authorization(request)
     if request_auth:
@@ -62,11 +70,12 @@ async def get_class_students(request: Request, class_name: str):
 @router.post("/students/add_student")
 async def add_student(request: Request, body: student_model):
     """
-    Add a new student to the database.
-    param: body (student_model): The data for the new student.
-    Returns: student_model: The added student data.
-    """
-
+     Add a new student to the database.
+     param: request (Request): The incoming HTTP request object.
+         body (student_model): The data for the new student.
+     Returns: student_model: The added student data.
+     Raises: HTTPException: If no validated token for the username is provided in the request or the user is not authorized as an admin.
+     """
     request_auth = check_Authorization(request)
     if request_auth:
         if check_if_user_admin(request):
