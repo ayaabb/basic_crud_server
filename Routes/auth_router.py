@@ -1,17 +1,24 @@
 from fastapi import APIRouter
 
-from auth_models.sign_in_model import UserSignIn
-from auth_utils.generation_fns import *
-from auth_models.auth_model import Auth_Model
-from file_handler.write_to_file import write_data
-from auth_utils.jwt_handler import generate_signJWT
-from auth_utils.verification_fns import verify_username, verify_password
+from AuthModels.auth_model import UserSignUp
+from AuthModels.sign_in_model import UserSignIn
+from AuthUtils.auth_utils import *
+from AuthUtils.jwt_utils import generate_signJWT
+from FileHandler.write_to_file import write_data
+from AuthUtils.token_utils import generate_new_tokens_data
+from AuthUtils.user_utils import generate_new_user_data
 
 router = APIRouter()
 
 
 @router.post("/auth/sign_up")
-def sign_up(body: Auth_Model):
+def sign_up(body: UserSignUp):
+    """
+    Register a new user.
+    param: body (Auth_Model): The user data including username, password, and user role.
+    Returns: str: Authentication token if sign-up is successful. Returns {"error": "username already existed"}
+             if the username already exists in the database.
+    """
     sorted_user = verify_username(body.username)
     if sorted_user:
         return {"error": "username already existed"}
@@ -25,6 +32,13 @@ def sign_up(body: Auth_Model):
 
 @router.post("/auth/sign_in")
 def sign_in(body: UserSignIn):
+    """
+        Authenticate an existing user.
+        param: body (UserSignIn): The user data including username and password.
+        Returns:   dict: Returns {"msg": "You signed in successfully"} if sign-in is successful.
+                  Returns {"msg": "Failed to sign in, your password is incorrect"} if the password is incorrect.
+                  Returns {"msg": "Failed to sign in, your username is incorrect"} if the username is incorrect.
+        """
     sorted_user = verify_username(body.username)
     if sorted_user:
         sorted_password = sorted_user["password"]
