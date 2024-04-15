@@ -1,0 +1,70 @@
+2024-04-08 23:43:51 delete_student {'Error': '401: Unauthorized'}
+2024-04-08 23:44:06 sign_in {'msg': 'You signed in successfully'}
+2024-04-08 23:44:10 delete_student {"Error": 'student not found'}
+2024-04-08 23:44:52 delete_student {'msg': 'deleted student successfully'}
+2024-04-08 23:49:06 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:04:01 get_all_students {'msg': 'succeeded'}
+2024-04-09 00:08:47 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:10:39 get_all_students {'msg': 'succeeded'}
+2024-04-09 00:11:48 get_all_students {'Error': '401: User unauthorized'}
+2024-04-09 00:12:12 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:12:13 get_all_students {'msg': 'succeeded'}
+2024-04-09 00:13:01 delete_all_students {'msg': 'deleted all students successfully'}
+2024-04-09 00:13:01 delete_all_students {'msg': 'deleted all students successfully'}
+2024-04-09 00:13:03 delete_all_students {'msg': 'deleted all students successfully'}
+2024-04-09 00:17:42 add_student {'Error': '401: User unauthorized'}
+2024-04-09 00:17:46 delete_all_students {'Error': '401: User unauthorized'}
+2024-04-09 00:18:02 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:18:05 add_student {'Error': '401: User unauthorized'}
+2024-04-09 00:18:36 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:18:38 add_student {'Error': '401: User unauthorized'}
+2024-04-09 00:19:52 add_student {'msg': 'added student successfully'}
+2024-04-09 00:22:26 get_class_students {'msg': 'succeeded'}
+2024-04-09 00:22:39 get_class_students {'Error': '401: User unauthorized'}
+2024-04-09 00:22:50 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:22:52 get_class_students {'msg': 'succeeded'}
+2024-04-09 00:23:24 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:23:26 get_class_students {'msg': 'succeeded'}
+2024-04-09 00:23:29 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:23:32 get_class_students {'Error': '403: You are not allowed!'}
+2024-04-09 00:27:56 get_student {'Error': '401: User unauthorized'}
+2024-04-09 00:28:00 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:28:05 get_student {'msg': 'succeeded'}
+2024-04-09 00:32:15 sign_up {'msg': 'You signed up successfully'}
+2024-04-09 00:33:19 get_student {'msg': 'succeeded'}
+2024-04-09 00:33:36 get_class_students {'Error': '403: You are not allowed!'}
+2024-04-09 00:35:55 get_class_students {'Error': '401: User unauthorized'}
+2024-04-09 00:36:00 get_student {'Error': '401: User unauthorized'}
+2024-04-09 00:36:07 sign_up {"Error": 'username already existed'}
+2024-04-09 00:36:26 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:36:29 get_student {'msg': 'succeeded'}
+2024-04-09 00:36:35 get_class_students {'Error': '403: You are not allowed!'}
+2024-04-09 00:48:30 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:51:25 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:51:36 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:51:44 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:52:08 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:52:13 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:54:42 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:54:49 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:54:50 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:55:28 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:56:10 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:56:31 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:56:49 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:56:54 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:56:55 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:57:08 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:57:48 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:57:57 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:58:45 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 00:58:50 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 00:58:51 delete_student {'Error': '404: Student not found'}
+2024-04-09 00:59:34 delete_student {'Error': '404: Student not found'}
+2024-04-09 01:01:32 delete_student {'Error': '401: User unauthorized'}
+2024-04-09 01:01:36 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 01:01:37 delete_student {'Success': '200: deleted student successfully'}
+2024-04-09 01:02:00 delete_student {'Error': '404: Student not found'}
+2024-04-09 01:03:00 delete_all_students {'Error': '401: User unauthorized'}
+2024-04-09 01:03:15 sign_in {'msg': 'You signed in successfully'}
+2024-04-09 01:03:17 delete_all_students {'Success': '200: deleted all students successfully'}

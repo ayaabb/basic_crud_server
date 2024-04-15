@@ -1,1 +1,1 @@
-{"aya": {"password": "$2b$12$1ByS.LV/2bPQx5HlhdeNCul04/xcpwNFyI1E4.BVk3CQ0JF4y0r.m", "user role": "admin"}, "sam": {"password": "$2b$12$ZB4SVLAXW85Y4zp6.THMl.tfD4d9aeN7Wnfs5zbFwEVtrMqJ2T9gO", "user role": "guest"}}
+{"aya": {"password": "$2b$12$1ByS.LV/2bPQx5HlhdeNCul04/xcpwNFyI1E4.BVk3CQ0JF4y0r.m", "user role": "admin"}, "sam": {"password": "$2b$12$ZB4SVLAXW85Y4zp6.THMl.tfD4d9aeN7Wnfs5zbFwEVtrMqJ2T9gO", "user role": "guest"}, "bob": {"password": "$2b$12$yHihCIEJDwKNcrrprufzku.lzVfvc4ACx9k2ITTHeQKOoJgcfGR8W", "user role": "guest"}}

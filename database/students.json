@@ -1,1 +1,20 @@
-[{"name": "Alice", "id": 1, "age": 20, "classes": ["Math", "Science"]}, {"name": "Bob", "id": 2, "age": 21, "classes": ["History", "English"]}, {"name": "aya", "id": 4, "age": 24, "classes": ["History"]}, {"name": "rose", "id": 5, "age": 33, "classes": ["Math", "History"]}, {"name": "John Doe", "id": 123, "age": 18, "classes": ["Math", "Science"]}]
+[
+  {
+    "name": "John Doe",
+    "id": 123,
+    "age": 20,
+    "classes": ["Math", "Physics", "English"]
+  },
+  {
+    "name": "Jane Smith",
+    "id": 456,
+    "age": 21,
+    "classes": ["History", "Biology"]
+  },
+  {
+    "name": "Alice Johnson",
+    "id": 789,
+    "age": 19,
+    "classes": ["Chemistry", "Computer Science"]
+  }
+]
