@@ -7,11 +7,15 @@ from AuthUtils.jwt_utils import generate_signJWT
 from FileHandler.write_to_file import write_data
 from AuthUtils.token_utils import generate_new_tokens_data
 from AuthUtils.user_utils import generate_new_user_data
+from logger.logging_decorator import log_decorator
 
 router = APIRouter()
 
+### add try except HTTPEX..!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 @router.post("/auth/sign_up")
+@log_decorator
 def sign_up(body: UserSignUp):
     """
     Register a new user.
@@ -21,16 +25,17 @@ def sign_up(body: UserSignUp):
     """
     sorted_user = verify_username(body.username)
     if sorted_user:
-        return {"error": "username already existed"}
+        return {"Error": "username already existed"}
     updated_db = generate_new_user_data(body)
     write_data("database/auth_users.json", updated_db)
     auth_token = generate_signJWT(body, body.user_role)
     updated_tokens = generate_new_tokens_data(body.username, auth_token)
     write_data("database/users_tokens.json", updated_tokens)
-    return auth_token
+    return {"msg": "You signed up successfully"}
 
 
 @router.post("/auth/sign_in")
+@log_decorator
 def sign_in(body: UserSignIn):
     """
         Authenticate an existing user.
@@ -49,5 +54,5 @@ def sign_in(body: UserSignIn):
             if auth_token:
                 return {"msg": "You signed in successfully"}
         else:
-            return {"msg": "Failed to sign in ,your password is incorrect"}
-    return {"msg": "Failed to sign in ,your username is incorrect"}
+            return {"Error": "Failed to sign in ,your password is incorrect"}
+    return {"Error": "Failed to sign in ,your username is incorrect"}

@@ -1,6 +1,14 @@
 from FileHandler.read_from_file import get_data
 
 
+def delete_student_from_data(student_id, students):
+    for student in students:
+        if student['id'] == student_id:
+            students.remove(student)
+            return students
+    return None
+
+
 def add_new_student_to_data(name, id_, age, classes, file_path):
     """
          Add a new student to the existing data.
